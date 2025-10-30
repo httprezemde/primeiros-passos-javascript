@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let nomedoUsuario = prompt('Digite o nome do usuário: ');
+        var idadedoUsuario = prompt('Digite a idade do usuário: ');
+        // const sexodoUsuario = +prompt('Digite o sexo do usuário: ');
+        var cepdoUsuario = prompt('Digite o CEP do usuário: ');
+        var cordocabelodoUsuario = prompt('Digite a cor do cabelo do usuário: ');
+        var alturadoUsuario = prompt('Digite a altura do usuário:')
+
+        if (idadedoUsuario >= 18) {
+            alert('O usuário é maior de idade. ');
+        } else {
+            alert('O usuário é menor de idade. ');
+        }
+
+        //  if (cepdoUsuario == 123456) {
+        //         alert('CEP válido.');
+        //  } else {
+        //        alert('CEP inválido.');
+        //     }
+        if (cordocabelodoUsuario == 'loiro') {
+            alert('Usuario loiro identificado');
+        }
+
+        alert('Nome: ' + nomedoUsuario + '\nIdade: ' + idadedoUsuario + '\nCEP: ' + cepdoUsuario + '\nCor do cabelo: ' + cordocabelodoUsuario + '\nAltura: ' + alturadoUsuario);
+    </script>
+</body>
+
+</html>
