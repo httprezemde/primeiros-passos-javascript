@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nota do Aluno</title>
+</head>
+<body>
+  <script>
+const notaDoAluno = parseFloat(prompt("Digite a nota do aluno (de 0 a 10):"));
+let classificacao = "";
+
+if (notaDoAluno >= 7) {
+  classificacao = "aprovado";
+  alert("Aprovado!");
+} else if (notaDoAluno >= 5) {
+  classificacao = "recuperacao";
+  alert("Recuperação!");
+} else {
+  classificacao = "reprovado";
+  alert("Reprovado!");
+}
+
+switch (classificacao) {
+  case "aprovado":
+    alert("Parabéns!");
+    break;
+  case "recuperacao":
+    alert("Quase lá!");
+    break;
+  case "reprovado":
+    alert("Estude mais!");
+    break;
+  default:
+    alert("Classificação inválida.");
+}
+</script>
+</body>
+</html>
+
