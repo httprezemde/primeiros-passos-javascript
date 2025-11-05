@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laço Repetição JS</title>
+  </head>
+  <body>
+    <script>
+      //1 faça um console.log de todos pares de 0 a 10
+      //2 crie um validador de numero primo
+      for (let index = 0; index <= 21; index++) {
+        if (index % 2 === 0) {
+          console.log(index);
+        }
+      }
+      function ehPrimo(numero) {
+        if (numero < 2) return false;
+        for (let i = 2; i <= Math.sqrt(numero); i++) {
+          if (numero % i === 0) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      console.log(ehPrimo(2)); // true
+      console.log(ehPrimo(4)); // falso
+      console.log(ehPrimo(79)); // true
+    </script>
+  </body>
+</html>
