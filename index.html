@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Avaliativo</title>
+</head>
+
+<body>
+    <script>
+        let tempoDeCasa = 4; // ano
+        let metaBatida = true;
+        let produtos = ['eletronicos', 'vestuario', 'alimentos', 'moveis'];
+        let produtoMaisVendido = 2
+        let bonusTotal = 0;
+
+        let multiplicadorBase = 1;
+
+        if (tempoDeCasa < 1) {
+            multiplicadorBase = 1;
+        } else if (tempoDeCasa >= 1 && tempoDeCasa <= 5) {
+            multiplicadorBase = 1.5;
+        } else if (tempoDeCasa > 5) {
+            multiplicadorBase = 2;
+        }
+
+        if (metaBatida === true) {
+            bonusTotal += 1000;
+        } else {
+            bonusTotal += 200;
+        }
+
+        switch (produtos[produtoMaisVendido]) {
+            case 'eletronicos':bonusTotal += 500;
+                break;
+            case 'vestuario':bonusTotal += 300;
+                break;
+            case 'alimentos':bonusTotal += 100;
+                break;
+            case 'moveis':bonusTotal += 200;
+                break;
+            default:bonusTotal += 50;
+                break;
+        }
+
+        // let bonusFinal = bonusTotal * multiplicadorBase;
+
+        console.log("=== RELATÓRIO DE BÔNUS ===");
+        console.log(`Tempo de casa: ${tempoDeCasa} ano(s)`);
+        console.log(`Meta batida: ${metaBatida ? 'SIM' : 'NÃO'}`);
+        console.log(`Produto mais vendido: ${produtoMaisVendido}`);
+        console.log(`Multiplicador base: ${multiplicadorBase}x`);
+        console.log(`Bônus bruto: R$ ${bonusTotal.toFixed(2)}`);
+        console.log(`BÔNUS FINAL: R$ ${(bonusTotal*multiplicadorBase).toFixed(2)}`);
+
+        // Opcional: alerta na tela (bom para testes rápidos)
+        alert(`Bônus Final: R$ ${(bonusTotal*multiplicadorBase).toFixed(2)}`);
+
+
+    </script>
+</body>
+
+</html>
